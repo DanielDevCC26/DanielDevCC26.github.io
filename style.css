@@ -319,3 +319,8 @@ footer {
         transition: none !important;
     }
 }
+
+#contato a {
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
