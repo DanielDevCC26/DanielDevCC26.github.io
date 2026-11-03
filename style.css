@@ -440,3 +440,82 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==================================
+   NAVEGAÇÃO RESPONSIVA
+   ================================== */
+
+.logo {
+    white-space: nowrap;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--primary);
+    border-radius: 3px;
+}
+
+nav a:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+/* Menu para celulares e tablets */
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .logo {
+        font-size: 15px;
+        white-space: normal;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 15px 0;
+        border-top: 1px solid var(--border);
+    }
+
+    nav ul.menu-aberto {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul a {
+        display: block;
+        padding: 12px 10px;
+    }
+
+    nav ul a:hover {
+        background-color: var(--surface);
+    }
+}

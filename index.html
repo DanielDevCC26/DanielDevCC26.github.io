@@ -11,18 +11,35 @@
 </head>
 <body>
 
-    <header>
-        <nav aria-label="Navegação principal">
-            <a href="#inicio">Daniel Gonçalves Santana</a>
+    
+<header>
+    <nav aria-label="Navegação principal">
+        <a href="#inicio" class="logo">
+            Daniel Gonçalves Santana
+        </a>
 
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="menu-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <main>
 
@@ -298,5 +315,6 @@
         <p>Daniel Gonçalves Santana | Portfólio Profissional</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
