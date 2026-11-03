@@ -519,3 +519,175 @@ nav a:focus-visible,
         background-color: var(--surface);
     }
 }
+
+
+/* ==================================
+   ETAPA 8 - HERO SECTION
+   ================================== */
+
+#inicio.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 0;
+}
+
+.hero-conteudo {
+    max-width: 950px;
+    animation: aparecer 0.8s ease-out both;
+}
+
+#inicio .hero-saudacao {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+#inicio.hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+    letter-spacing: -1.5px;
+}
+
+#inicio.hero h2 {
+    font-size: clamp(19px, 2.8vw, 27px);
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#inicio.hero h2::after {
+    display: none;
+}
+
+#inicio .hero-descricao {
+    max-width: 740px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+/* Botões da apresentação */
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 55px;
+}
+
+#inicio .hero-botoes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    transition:
+        transform 0.3s,
+        background-color 0.3s,
+        border-color 0.3s;
+}
+
+#inicio .hero-botoes a:hover {
+    transform: translateY(-3px);
+}
+
+#inicio .btn-primary {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+#inicio .btn-secondary {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+#inicio .btn-secondary:hover {
+    border-color: var(--primary);
+    background-color: var(--surface);
+}
+
+/* Indicadores */
+
+.hero-indicadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.hero-indicadores div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-indicadores strong {
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.hero-indicadores span {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+/* Animação de entrada */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    #inicio.hero {
+        min-height: auto;
+        padding: 85px 0 65px;
+    }
+
+    #inicio.hero h1 {
+        letter-spacing: -0.5px;
+    }
+
+    .hero-botoes {
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    #inicio .hero-botoes a {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .hero-indicadores {
+        gap: 25px;
+    }
+
+    .hero-indicadores strong {
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-conteudo {
+        animation: none;
+    }
+}
