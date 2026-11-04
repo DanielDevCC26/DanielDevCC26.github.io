@@ -964,3 +964,55 @@ nav ul a:hover {
         min-width: 0;
     }
 }
+
+
+/* ==================================
+   ETAPA 11.4.1 - CARTÕES DE TECNOLOGIAS
+   ================================== */
+
+.tecnologias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tecnologias-grid article {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tecnologias-grid article:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.tecnologias-grid h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.tecnologias-grid p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .tecnologias-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tecnologias-grid article {
+        padding: 22px;
+    }
+}
