@@ -1016,3 +1016,57 @@ nav ul a:hover {
         padding: 22px;
     }
 }
+
+
+/* ETAPA 11.4.4 - IDIOMAS E OBJETIVO PROFISSIONAL */
+
+#objetivo .objetivo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+#objetivo .objetivo-grid article {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    min-width: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#objetivo .objetivo-grid article:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+#objetivo .objetivo-grid h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+#objetivo .objetivo-grid p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+#objetivo .objetivo-grid p:last-child {
+    margin-bottom: 0;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    #objetivo .objetivo-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #objetivo .objetivo-grid article {
+        padding: 22px;
+    }
+}
