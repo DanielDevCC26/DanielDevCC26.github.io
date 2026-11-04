@@ -927,3 +927,40 @@ nav ul a:hover {
         padding: 22px;
     }
 }
+
+
+/* ==================================
+   ETAPA 11.3 - AJUSTES PARA CELULAR
+   ================================== */
+
+@media (max-width: 480px) {
+
+    /* Reduz o espaço acima da foto */
+
+    #inicio.hero {
+        padding-top: 55px;
+    }
+
+    /* Melhora a leitura da apresentação */
+
+    #inicio .hero-descricao {
+        line-height: 1.7;
+    }
+}
+
+
+/* ==================================
+   ETAPA 11.3.2 - PROJETOS NO CELULAR
+   ================================== */
+
+@media (max-width: 768px) {
+
+    #projetos .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #projetos .projeto-card {
+        width: 100%;
+        min-width: 0;
+    }
+}
