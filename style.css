@@ -256,7 +256,6 @@ section h2::after {
     gap: 25px;
     align-items: stretch;
 }
-}
 
 #projetos article {
     background-color: var(--surface);
@@ -928,7 +927,6 @@ nav ul a:hover {
     }
 }
 
-
 /* ==================================
    ETAPA 11.3 - AJUSTES PARA CELULAR
    ================================== */
@@ -948,7 +946,6 @@ nav ul a:hover {
     }
 }
 
-
 /* ==================================
    ETAPA 11.3.2 - PROJETOS NO CELULAR
    ================================== */
@@ -964,7 +961,6 @@ nav ul a:hover {
         min-width: 0;
     }
 }
-
 
 /* ==================================
    ETAPA 11.4.1 - CARTÕES DE TECNOLOGIAS
@@ -1017,7 +1013,6 @@ nav ul a:hover {
     }
 }
 
-
 /* ETAPA 11.4.4 - IDIOMAS E OBJETIVO PROFISSIONAL */
 
 #objetivo .objetivo-grid {
@@ -1068,5 +1063,43 @@ nav ul a:hover {
 
     #objetivo .objetivo-grid article {
         padding: 22px;
+    }
+}
+
+/* ==================================
+   MELHORIAS SOLICITADAS PELO MENTOR
+   CARDS INTEIRAMENTE CLICÁVEIS
+   ================================== */
+
+/* Cada card serve como referência
+   para a área clicável do seu link */
+
+#projetos .projeto-card {
+    position: relative;
+    cursor: pointer;
+}
+
+/* O link do GitHub passa a cobrir
+   toda a superfície do card */
+
+#projetos .projeto-card > a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
+/* Destaca o card quando seu link
+   recebe foco pelo teclado */
+
+#projetos .projeto-card:focus-within {
+    border-color: var(--primary);
+}
+
+/* Acessibilidade: movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+    #projetos .projeto-card {
+        transition: none;
     }
 }
