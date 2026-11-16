@@ -1103,3 +1103,229 @@ nav ul a:hover {
         transition: none;
     }
 }
+
+
+/* ==========================================
+   ETAPA 12 - AI CUSTOMER INTELLIGENCE
+   PROJETO PRINCIPAL DO PORTFÓLIO
+   ========================================== */
+
+/* Card principal ocupa toda a largura da grade */
+
+#projetos .projetos-grid .projeto-destaque {
+    grid-column: 1 / -1;
+
+    background: linear-gradient(
+        135deg,
+        var(--surface) 0%,
+        #102a45 100%
+    );
+
+    border: 2px solid var(--primary);
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Destaque ao passar o mouse */
+
+#projetos .projeto-destaque:hover {
+    transform: translateY(-5px);
+
+    border-color: #7dd3fc;
+
+    box-shadow: 0 16px 40px rgba(56, 189, 248, 0.18);
+}
+
+/* Categoria do projeto */
+
+#projetos .projeto-destaque .projeto-categoria {
+    color: #7dd3fc;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    margin-bottom: 20px;
+}
+
+/* Imagem do dashboard */
+
+#projetos .projeto-destaque .projeto-imagem {
+    width: min(100%, 850px);
+
+    aspect-ratio: 16 / 9;
+
+    margin: 0 auto 28px;
+
+    background-color: #ffffff;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+/* Preserva a visualização completa do dashboard */
+
+#projetos .projeto-destaque .projeto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.65s cubic-bezier(
+        0.22, 1, 0.36, 1
+    );
+}
+
+/* Ampliação suave da imagem */
+
+#projetos .projeto-destaque .projeto-imagem:hover img {
+    transform: scale(1.05);
+}
+
+/* Título principal */
+
+#projetos .projeto-destaque h3 {
+    color: var(--primary);
+
+    font-size: clamp(24px, 3vw, 32px);
+
+    line-height: 1.3;
+
+    margin-bottom: 18px;
+}
+
+/* Descrição do projeto */
+
+#projetos .projeto-destaque p {
+    max-width: 900px;
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 24px;
+}
+
+/* Tecnologias utilizadas */
+
+#projetos .projeto-destaque .projeto-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+#projetos .projeto-destaque .projeto-tecnologias span {
+    background-color: rgba(11, 17, 32, 0.85);
+
+    color: #e2e8f0;
+
+    border: 1px solid #38516b;
+    border-radius: 6px;
+
+    padding: 6px 12px;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Link para o GitHub */
+
+#projetos .projeto-destaque > a {
+    align-self: flex-start;
+
+    color: var(--primary);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-top: auto;
+}
+
+/* Card inteiro permanece clicável */
+
+#projetos .projeto-destaque > a::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+}
+
+/* Destaque de acessibilidade */
+
+#projetos .projeto-destaque:focus-within {
+    border-color: #7dd3fc;
+
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS E CELULARES
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    #projetos .projetos-grid .projeto-destaque {
+        grid-column: 1;
+
+        width: 100%;
+        min-width: 0;
+
+        padding: 22px;
+    }
+
+    #projetos .projeto-destaque .projeto-imagem {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+
+        margin-bottom: 22px;
+    }
+
+    #projetos .projeto-destaque h3 {
+        font-size: 23px;
+    }
+
+    #projetos .projeto-destaque p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #projetos .projeto-destaque .projeto-tecnologias {
+        gap: 8px;
+    }
+
+    #projetos .projeto-destaque .projeto-tecnologias span {
+        padding: 5px 9px;
+        font-size: 11px;
+    }
+}
+
+/* ==========================================
+   ACESSIBILIDADE - MOVIMENTO REDUZIDO
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #projetos .projeto-destaque,
+    #projetos .projeto-destaque .projeto-imagem img {
+        transition: none;
+    }
+}
